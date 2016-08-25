@@ -6,7 +6,8 @@ import SignupComponent from '../components/SignupComponent.jsx';
 import SigninComponent from '../components/SigninComponent.jsx';
 import NotFoundComponent from '../components/NotFoundComponent.jsx';
 
-export const renderRouter = () => (
+export default function renderRouter() {
+  return (
   <Router history={browserHistory}>
     <Route path="/" component={HomeComponent} />
     <Route path="/signin" component={SigninComponent} />
@@ -14,3 +15,4 @@ export const renderRouter = () => (
     <Route path="*" component={NotFoundComponent} />
   </Router>
 );
+}
